@@ -2,7 +2,7 @@ galaxy_info:
   author: Edwin Smulders
   description: Install powershell on Linux
   company: Northwave
-  license: GPLv3
+  license: MIT
 
   min_ansible_version: 2.9
   platforms:
