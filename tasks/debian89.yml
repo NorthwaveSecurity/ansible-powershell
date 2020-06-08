@@ -5,5 +5,5 @@
     state: present
 - name: Install official Powershell repository
   apt_repository:
-    repo: "{{ powershell_repository[ansible_distribution_release] }}"
+    repo: "{{ powershell_apt_repository[ansible_distribution_release] }}"
     state: present

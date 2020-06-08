@@ -1,11 +1,11 @@
 ---
 # defaults file for powershell
 # For debian 8/9
-powershell_install_dependencies:
+powershell_apt_install_dependencies:
   - apt-transport-https
   - gnupg
 powershell_microsoft_apt_key: https://packages.microsoft.com/keys/microsoft.asc
-powershell_repository:
+powershell_apt_repository:
   jessie: deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main
   stretch: deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main
 # For ubuntu, debian 10
@@ -13,6 +13,11 @@ powershell_repository_deb:
   xenial: https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
   bionic: https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
   buster: https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
-
+# for RedHat family
+powershell_yum_repository:
+  name: packages-microsoft-com-prod
+  baseurl: https://packages.microsoft.com/rhel/7/prod/
+  gpgcheck: True
+  gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 # Generic configuration
 powershell_package_name: "powershell"

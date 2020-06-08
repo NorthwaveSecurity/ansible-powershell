@@ -1,0 +1,13 @@
+---
+- name: Install Microsoft Powershell yum repository
+  yum_repository:
+    name: "{{ powershell_yum_repository.name }}"
+    description: "{{ powershell_yum_repository.name }}"
+    baseurl: "{{ powershell_yum_repository.baseurl }}"
+    gpgcheck: "{{ powershell_yum_repository.gpgcheck }}"
+    gpgkey: "{{ powershell_yum_repository.gpgkey }}"
+    state: present
+- name: Install Powershell
+  yum:
+    name: "{{ powershell_package_name }}"
+    state: present

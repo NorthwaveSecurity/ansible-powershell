@@ -13,6 +13,9 @@ The following platforms are currently supported:
 - Debian 10
 - Ubuntu 16.04
 - Ubuntu 18.04
+- CentOS 7
+
+Other RedHat family distributions may work but are not tested.
 
 Role Variables
 --------------

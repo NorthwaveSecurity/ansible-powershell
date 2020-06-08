@@ -14,6 +14,8 @@ platforms:
     image: debian:9
   - name: debian10
     image: debian:10
+  - name: centos7
+    image: centos:7
 provisioner:
   name: ansible
 verifier:
