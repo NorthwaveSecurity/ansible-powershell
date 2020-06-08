@@ -30,7 +30,7 @@ Example usage:
 ```yaml
 - hosts: servers
   roles:
-    - { role: powershell }
+    - { role: northwave.powershell }
 ```
 
 Development
