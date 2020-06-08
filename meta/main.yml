@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: powershell
   author: Edwin Smulders
   description: Install powershell on Linux
   company: Northwave
