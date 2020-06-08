@@ -8,8 +8,11 @@ powershell_microsoft_apt_key: https://packages.microsoft.com/keys/microsoft.asc
 powershell_repository:
   jessie: deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main
   stretch: deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main
-# For debian 10
-powershell_repository_deb: https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
+# For ubuntu, debian 10
+powershell_repository_deb:
+  xenial: https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+  bionic: https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+  buster: https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 
 # Generic configuration
 powershell_package_name: "powershell"

@@ -1,11 +1,17 @@
 ---
 # tasks file for powershell
-- include_tasks: debian.yml
-  when: ansible_os_family == "Debian" and ansible_distribution_release != "buster"
-- include_tasks: debian10.yml
-  when: ansible_os_family == "Debian" and ansible_distribution_release == "buster"
+- name: Install required dependencies
+  apt:
+    name: "{{ powershell_install_dependencies }}"
+    state: present
+  when: ansible_os_family == "Debian" # Includes ubuntu
+- include_tasks: debian89.yml
+  when: ansible_distribution == "Debian" and ansible_distribution_release != "buster"
+- include_tasks: debian-ubuntu.yml
+  when: ansible_distribution == "Ubuntu" or (ansible_distribution == "Debian" and ansible_distribution_release == "buster")
 - name: Install powershell
   apt:
     name: "{{ powershell_package_name }}"
     state: present
     update_cache: yes
+  when: ansible_os_family == "Debian" # Includes ubuntu

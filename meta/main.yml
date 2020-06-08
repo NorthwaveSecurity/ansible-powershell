@@ -11,9 +11,14 @@ galaxy_info:
     - 8
     - 9
     - 10
+  - name: Ubuntu
+    versions:
+    - 16.04
+    - 18.04
 
   galaxy_tags:
     - powershell
     - debian
+    - ubuntu
     
 dependencies: []

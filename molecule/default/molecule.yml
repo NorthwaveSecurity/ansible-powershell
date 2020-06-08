@@ -4,6 +4,10 @@ dependency:
 driver:
   name: docker
 platforms:
+  - name: ubuntu16.04
+    image: ubuntu:16.04
+  - name: ubuntu18.04
+    image: ubuntu:18.04
   - name: debian8
     image: debian:8
   - name: debian9

@@ -11,6 +11,8 @@ The following platforms are currently supported:
 - Debian 8
 - Debian 9
 - Debian 10
+- Ubuntu 16.04
+- Ubuntu 18.04
 
 Role Variables
 --------------

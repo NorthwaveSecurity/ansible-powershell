@@ -1,0 +1,4 @@
+---
+- name: Install microsoft repository and keys
+  apt:
+    deb: "{{ powershell_repository_deb[ansible_distribution_release] }}"

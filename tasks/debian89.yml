@@ -1,8 +1,4 @@
 ---
-- name: Install required dependencies
-  apt:
-    name: "{{ powershell_install_dependencies }}"
-    state: present
 - name: Install Microsoft apt key
   apt_key:
     url: "{{ powershell_microsoft_apt_key }}"
