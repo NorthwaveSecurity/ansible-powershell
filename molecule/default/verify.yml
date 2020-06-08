@@ -1,0 +1,14 @@
+---
+# This playbook executes Ansible tests for powershell.
+- name: Verify
+  hosts: all
+  tasks:
+  - name: Test a powershell command
+    command: pwsh -Command Write-Host 'Hello World!'
+    changed_when: False
+    register: powershell_command
+  - name: Example assertion
+    assert:
+      that: 
+        - powershell_command.rc == 0
+        - powershell_command.stdout == "Hello World!"

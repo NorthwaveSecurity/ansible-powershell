@@ -1,0 +1,11 @@
+---
+# tasks file for powershell
+- include_tasks: debian.yml
+  when: ansible_os_family == "Debian" and ansible_distribution_release != "buster"
+- include_tasks: debian10.yml
+  when: ansible_os_family == "Debian" and ansible_distribution_release == "buster"
+- name: Install powershell
+  apt:
+    name: "{{ powershell_package_name }}"
+    state: present
+    update_cache: yes
